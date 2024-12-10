@@ -84,26 +84,6 @@ function App() {
           Review next step of this tutorial.
         </a>
       </div>
-      <form>
-        <input name="newEmail" placeholder="New email" />
-        <button type="submit" onClick={
-          (event) => {
-            event.preventDefault();
-            const newEmail = (event.target as HTMLFormElement).newEmail.value;
-            handleUpdateUserAttribute("email", newEmail);
-          }
-        }>Update Email</button>
-      </form>
-      <form>
-        <input name="newPassword" placeholder="New password" />
-        <button type="submit" onClick={
-          (event) => {
-            event.preventDefault();
-            const newPassword = (event.target as HTMLFormElement).newEmail.value;
-            handleUpdateUserAttribute("password", newPassword);
-          }
-        }>Update Password</button>
-      </form>
       <button onClick={signOut}>Sign out</button>
       <button onClick={handleDeleteUser}>Delete user</button>
     </main>
